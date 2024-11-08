@@ -16,7 +16,7 @@ func main() {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	tmp, err := template.ParseFiles("index.html")
+	tmp, err := template.ParseFiles("index2.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}

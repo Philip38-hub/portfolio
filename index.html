@@ -4,39 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Philip's - Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg text-uppercase">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active rounded" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <section id="hero">
-    <h1>Hi, I'm Philip Ochieng</h1>
-    <p>I'm a software developer specializing in building (and occasionally designing) exceptional digital experiences.</p>
-    <a href="#projects" class="button">Check out my work</a>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="images/philip.jpg" alt="Philip">
-    <p>Short bio about yourself.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project Title</h3>
-      <p>Project description.</p>
-      <a href="https://github.com/Philip38-hub" class="button">View on GitHub</a>
+  <section class="main py-5">
+    <div class="container py-5">
+      <div class="row py-5"></div>
+        <!-- <div class="col-md-6">Link styles
+          <img src="images/illustration.jpg" alt="Illustration">
+        </div> -->
+        <div class="col-md-6 py-5">
+          <h3><small>Hi, I'm </small><br>
+            Philip Ochieng
+          </h3>
+          <h6>Full Stack Software Developer</h6>
+          <input type="button" value="My work" class="bt1 mt-5">
+          <input type="button" value="Hore Me" class="bt2 mt-5">
+        </div>
+      </div>
     </div>
-    <!-- Add more projects as needed -->
+  </section>
+
+  <section class="about">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-lg-5">
+          <img src="images/background.jpeg"  class="img-fluid" alt="about img">
+        </div>
+        <div class="col-lg-5 pt-3">
+          <h1>About Me</h1>
+          <p>FULL STACK SOFTWARE DEVELOPER</p>
+          <p class="pt-3">Hi, I am <span class="font-weight-bold">Philip Ochieng</span>, consectetur adipiscing elit. Nulla facilisi. Donec et libero vitae velit elementum ultricies. Nullam faucibus, arcu id consectetur consectetur, felis nunc ultricies velit, at semper velit lectus vel metus. Sed malesuada, dui vitae vestibulum rutrum, est justo fermentum velit, ut dignissim nunc nisi id nisi. In hac habitasse platea dictumst.</p>
+          
+          <div class="progress py-3">
+            <div class="pro-value1 my-3"></div>
+              <p>HTML/CSS <span class="text-secondary float-right">95%</span></p>
+          </div> 
+          <div class="progress py-3 my-3">
+            <div class="pro-value2"></div>
+              <p>Golang <span class="text-secondary float-right">95%</span></p>
+          </div> 
+          <div class="progress py-3">
+            <div class="pro-value3"></div>
+              <p>Javascript <span class="text-secondary float-right">95%</span></p>
+          </div> 
+          <div class="progress py-3 my-3">
+            <div class="pro-value4"></div>
+              <p>Frontend <span class="text-secondary float-right">95%</span></p>
+          </div> 
+
+          <input type="button" class="btn1 mt-5" value="Download C.V">
+          <input type="button" class="btn2 mt-5" value="Contact Me">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="projects py-5 bg-light">
+    <div class="container py-5">
+      <h1 class="text-center pb-5">Projects</h1>
+      <div class="row pb-3">
+        <div class="col-lg-4 mb-3">
+          <div class="card text-center py-3">
+            <div class="card-body">
+              <div class="circle">
+                <span><i class="fa fa-desktop" aria-hidden="true"></i></span>
+              </div>
+              <h4 class="font-weight-bold pb-2">UX/UI</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet orci in justo fermentum tempor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
@@ -49,5 +114,6 @@
   </footer>
 
   <script src="js/scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

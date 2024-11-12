@@ -4,27 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Philip's - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="static/styles.css">
+  <link rel="stylesheet" href="./static/font-awesome/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg text-uppercase">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg fixed-top text-uppercase">
+      <div class="container-fluid py-1">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active rounded" aria-current="page" href="#">Home</a>
+              <a class="nav-link active rounded px-5" aria-current="page" href="#main">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded" href="#">Link</a>
+              <a class="nav-link rounded bt1" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded" href="#">Link</a>
+              <a class="nav-link rounded px-5 bt2" href="#about">About</a>
             </li>
           </ul>
         </div>
@@ -32,64 +33,134 @@
     </nav>
   </header>
 
-  <section class="main py-5">
-    <div class="container py-5">
-      <div class="row py-5"></div>
-        <!-- <div class="col-md-6">Link styles
+  <section id="main" class="main pt-5">
+    <div class="container pt-5 main-container d-flex flex-column justify-content-end">
+      <div class="row main-row">
+        <!-- <div class="col-md-6 p">Link styles
           <img src="images/illustration.jpg" alt="Illustration">
         </div> -->
-        <div class="col-md-6 py-5">
+        <div>
           <h3><small>Hi, I'm </small><br>
             Philip Ochieng
           </h3>
           <h6>Full Stack Software Developer</h6>
-          <input type="button" value="My work" class="bt1 mt-5">
-          <input type="button" value="Hore Me" class="bt2 mt-5">
+          <div class="line"></div>
+          <input type="button" class="bt1 mt-3" value="Projects" onclick="location.href='#projects'">
+          <input type="button" class="bt2 mt-3" value="Contact me" onclick="location.href='#contact'">
+
         </div>
       </div>
     </div>
   </section>
 
-  <section class="about">
+  <section id="about">
     <div class="container py-5">
       <div class="row py-5">
-        <div class="col-lg-5">
-          <img src="images/background.jpeg"  class="img-fluid" alt="about img">
+        <div class="col-lg-5" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-out">
+          <img src="./static/images/background.jpeg"  class="img-fluid" alt="about img">
         </div>
         <div class="col-lg-5 pt-3">
           <h1>About Me</h1>
           <p>FULL STACK SOFTWARE DEVELOPER</p>
-          <p class="pt-3">Hi, I am <span class="font-weight-bold">Philip Ochieng</span>, consectetur adipiscing elit. Nulla facilisi. Donec et libero vitae velit elementum ultricies. Nullam faucibus, arcu id consectetur consectetur, felis nunc ultricies velit, at semper velit lectus vel metus. Sed malesuada, dui vitae vestibulum rutrum, est justo fermentum velit, ut dignissim nunc nisi id nisi. In hac habitasse platea dictumst.</p>
+          <p class="pt-3">Hi, I am <span class="font-weight-bold">Philip Ochieng</span>,an enthusiastic software developer with a strong foundation in computer science, having completed a 4-year degree in the field. Currently, I'm gaining hands-on experience as an apprentice developer, where I've been sharpening my skills over the past 9 months. I enjoy building efficient, user-centered applications and have a growing expertise in HTML, CSS, JavaScript, and Go, with a focus on frontend development. I'm excited to continue expanding my knowledge and contribute to projects that make a difference!</p>
           
           <div class="progress py-3">
             <div class="pro-value1 my-3"></div>
-              <p>HTML/CSS <span class="text-secondary float-right">95%</span></p>
+              <p>HTML/CSS <span class="text-secondary float-right pt-3">70%</span></p>
           </div> 
           <div class="progress py-3 my-3">
             <div class="pro-value2"></div>
-              <p>Golang <span class="text-secondary float-right">95%</span></p>
+              <p>Golang <span class="text-secondary float-right">30%</span></p>
           </div> 
           <div class="progress py-3">
             <div class="pro-value3"></div>
-              <p>Javascript <span class="text-secondary float-right">95%</span></p>
+              <p>Javascript <span class="text-secondary float-right">40%</span></p>
           </div> 
           <div class="progress py-3 my-3">
             <div class="pro-value4"></div>
-              <p>Frontend <span class="text-secondary float-right">95%</span></p>
+              <p>Frontend <span class="text-secondary float-right">60%</span></p>
           </div> 
 
-          <input type="button" class="btn1 mt-5" value="Download C.V">
-          <input type="button" class="btn2 mt-5" value="Contact Me">
+          <!-- Download C.V Button -->
+          <input type="button" class="btn1 mt-5" value="Download C.V" onclick="location.href='sample_cv.txt'" download>
+          <input type="button" class="btn2 mt-5" value="Contact Me" onclick="location.href='#contact'">
 
       </div>
     </div>
   </section>
 
-  <section class="projects py-5 bg-light">
-    <div class="container py-5">
+  <section id="projects" class="py-5 bg-light">
+    <div class="container py-5">      
       <h1 class="text-center pb-5">Projects</h1>
       <div class="row pb-3">
-        <div class="col-lg-4 mb-3">
+        <div class="col-lg-4 mb-3 " data-aos="fade-down-right" data-aos-duration="2000">
+          <div class="card text-center py-3">
+            <div class="card-body">
+              <div class="circle">
+                <span><i class="fa fa-desktop" aria-hidden="true"></i></span>
+              </div>
+              <h4 class="font-weight-bold pb-2">UX/UI</h4>
+              <h5 class="font-weight-bold pb-1">Movie App Enhance</h5>
+              <p>This project focuses on creating a user-friendly, mood-based movie filter for a cinema chain platform. The goal was to streamline the movie selection process by offering tailored recommendations based on the user’s current mood. Through an iterative design process involving wireframes, user testing, and enhancements, the final prototype offers an intuitive experience that includes mood selection and customization, hover tooltips for mood descriptions, and a refresh option for movie suggestions. This project demonstrates my skills in user-centered design, rapid prototyping, and usability testing to create solutions that meet real user needs..</p>
+              <p>Read more about this project on medium and see the files on github</p>
+              <button class="btn1 mt-5" onclick="window.open('https://medium.com/@oumaphilip01/my-journey-to-building-a-mood-based-movie-filter-prototype-f7e9c28a7e98', '_blank')">Medium</button>
+              <button class="btn1 mt-5" onclick="window.open('https://github.com/Philip38-hub/movie-app-enhance.git', '_blank')">Github</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 " data-aos="fade-down" data-aos-duration="2000">
+          <div class="card text-center py-3">
+            <div class="card-body">
+              <div class="circle">
+                <span><i class="fa fa-desktop" aria-hidden="true"></i></span>
+              </div>
+              <h4 class="font-weight-bold pb-2">FUll STACK</h4>
+              <h5 class="font-weight-bold pb-1">Django Service Market Place</h5>
+              <p>A full-featured Django application that connects service providers and customers, enabling easy booking and management of local services like plumbing, carpentry, and housekeeping. This platform offers user roles for customers and companies, secure login and registration, service listing, real-time booking requests, and ratings. The app is designed with scalability in mind and includes custom forms, pagination, and user profile management. Testing and code coverage ensure reliability and maintainability, with a sleek UI for a smooth user experience.</p>
+              <p>See project in my github</p>
+              <button class="btn1 mt-5" onclick="window.open('https://github.com/Philip38-hub/netfix.git', '_blank')">Github</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 " data-aos="fade-down-left" data-aos-duration="2000">
+          <div class="card text-center py-3">
+            <div class="card-body">
+              <div class="circle">
+                <span><i class="fa fa-desktop" aria-hidden="true"></i></span>
+              </div>
+              <h4 class="font-weight-bold pb-2">FUll Stack</h4>
+              <h5 class="font-weight-bold pb-1">Groupie Trackers</h5>
+              <p>A Go-powered web application that provides detailed information on music artists, bands, and tour locations. The app features real-time search with categorized results and leverages data caching for fast, user-friendly access to artist data from external APIs. Built with Go for backend logic, JavaScript for client-side interactivity, HTML, CSS, and Bootstrap for a responsive UI, and REST APIs for real-time data integration, this project demonstrates skills in backend development, efficient data handling, and API integration for a seamless user experience.</p>
+              <p>See project in my github</p>
+              <button class="btn1 mt-5" onclick="window.open('https://github.com/Philip38-hub/groupie-tracker.git', '_blank')">Github</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pb-3">
+        <div class="col-lg-4 mb-3 " data-aos="fade-up-right" data-aos-duration="2000">
+          <div class="card text-center py-3">
+            <div class="card-body">
+              <div class="circle">
+                <span><i class="fa fa-desktop" aria-hidden="true"></i></span>
+              </div>
+              <h4 class="font-weight-bold pb-2">UX/UI</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet orci in justo fermentum tempor.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 " data-aos="fade-up" data-aos-duration="2000">
+          <div class="card text-center py-3">
+            <div class="card-body">
+              <div class="circle">
+                <span><i class="fa fa-desktop" aria-hidden="true"></i></span>
+              </div>
+              <h4 class="font-weight-bold pb-2">UX/UI</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet orci in justo fermentum tempor.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 " data-aos="fade-up-left" data-aos-duration="2000">
           <div class="card text-center py-3">
             <div class="card-body">
               <div class="circle">
@@ -101,19 +172,68 @@
           </div>
         </div>
       </div>
+      
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Get in touch with me via <a href="mailto:your.email@example.com">email</a> or follow me on <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>.</p>
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact</h2>
+      <h5 class="text-center mb-3">Get in touch with me via</h5>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="mailto:your.email@example.com" class="contact-icon" data-aos="fade-down-left" ><i class="fa fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/philip-ochieng-173213210/" class="contact-icon" data-aos="fade-down-left" data-aos-duration="1000"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/Philip38-hub" class="contact-icon" data-aos="fade-down-left" data-aos-duration="1500"><i class="fa fa-github"></i></a>
+        <a href="https://www.facebook.com/your-username/" class="contact-icon" data-aos="fade-down-left" data-aos-duration="2000"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.twitter.com/your-username/" class="contact-icon" data-aos="fade-down-left" data-aos-duration="2500"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
   </section>
-
-  <footer>
-    <p>© 2024 Your Name</p>
+  <footer class="text-white py-3" style="background-color: #f8f9fa;">
+    <div class="container text-center">
+      <p class="mb-0 text-dark">© 2024 Dots Developers. All Rights Reserved.</p>
+    </div>
   </footer>
+  
 
   <script src="js/scripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    // Select the progress bars
+    const progressSection = document.getElementById('about');
+    const progressBars = document.querySelectorAll('.pro-value1, .pro-value2, .pro-value3, .pro-value4');
+
+    // Intersection Observer options
+    const observerOptions = {
+      threshold: 0.5, // Trigger when 50% of the section is visible
+    };
+
+    // Observer callback function
+    const observerCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Trigger animations for each progress bar
+          progressBars.forEach((bar) => {
+            // Remove and re-add the animation class to restart it
+            bar.style.animation = 'none';
+            bar.offsetHeight; // Trigger reflow to reset the animation
+            bar.style.animation = '';
+            
+            // Set the specific animation for each progress bar
+            if (bar.classList.contains('pro-value1')) bar.style.animation = 'load1 3s forwards';
+            if (bar.classList.contains('pro-value2')) bar.style.animation = 'load2 3s forwards';
+            if (bar.classList.contains('pro-value3')) bar.style.animation = 'load3 3s forwards';
+            if (bar.classList.contains('pro-value4')) bar.style.animation = 'load4 3s forwards';
+          });
+        }
+      });
+    };
+
+    // Set up the Intersection Observer
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    observer.observe(progressSection);
+  </script>
 </body>
 </html>

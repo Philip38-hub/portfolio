@@ -14,7 +14,7 @@
 .nav-link {
   color: black !important; /* Override Bootstrap's color */
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem !important;
   font-weight: 700;
   cursor: pointer;
 }
@@ -26,10 +26,19 @@
 }
 /* main section */
 .main{
-  background: url(./images/background.jpeg) no-repeat center center;
+  background: url(./images/background2.jpg) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 96vh;
+}
+
+
+.main-container {
+  height: 100vh;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 .main h3{
   font-size: 4.4rem;
@@ -78,6 +87,13 @@
   color: #F5F5EB;
 }
 
+.line{
+  margin-top: 0.5rem; /* Adjust spacing above the line */
+  width: 50%; /* Slightly wider than the text */
+  border-bottom: 2px solid #333; /* Line color and thickness */
+  margin-left: -10px; /* Center the line */
+}
+
 .about img{
   box-shadow: 9px 4px 9px 3px rgba(0,0,0,0.31);
   -webkit-box-shadow: 9px 4px 9px 3px rgba(0,0,0,0.31);
@@ -109,7 +125,7 @@ h1 {
 }
 
 .progress p{
-  color: white;
+  color: #757528;
   padding: 12px;
 }
 
@@ -141,7 +157,7 @@ h1 {
     width: 0%;
   }
   100% {
-    width: 98%;
+    width: 70%;
   }
 }
 @keyframes load2 {
@@ -149,7 +165,7 @@ h1 {
     width: 0%;
   }
   100% {
-    width: 98%;
+    width: 30%;
   }
 }
 @keyframes load3 {
@@ -157,7 +173,7 @@ h1 {
     width: 0%;
   }
   100% {
-    width: 98%;
+    width: 45%;
   }
 }
 @keyframes load4 {
@@ -165,7 +181,7 @@ h1 {
     width: 0%;
   }
   100% {
-    width: 98%;
+    width: 60%;
   }
 }
 
@@ -204,23 +220,34 @@ h1 {
   transition: 0.5s;
 }
 
-.card{
+.card {
   border: none;
   outline: none;
   box-shadow: -26px 10px 34px 1px rgba(0,0,0,0.36);
   -webkit-box-shadow: -26px 10px 34px 1px rgba(0,0,0,0.36);
   -moz-box-shadow: -26px 10px 34px 1px rgba(0,0,0,0.36);
+  height: 400px; /* Fixed height for uniformity */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  overflow-y: auto; /* Enables scrolling when content overflows */
+  padding: 1rem;
+  flex-grow:1;
+  height: 400px;
+  justify-content: space-between;
 }
 
 .card p{
   color: gray;
 }
-.circle{
+.circle {
   height: 70px;
   width: 70px;
   background-color: lightgrey;
-  color:black;
-  padding:12px;
+  color: black;
+  padding: 12px;
   font-size: 30px;
   border-radius: 50%;
   display: inline-block;
@@ -231,4 +258,36 @@ h1 {
   background-color: black;
   color: white;
   transition: 0.5s ease-in-out;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #000; /* Black background */
+  color: #fff;            /* White icon color */
+  font-size: 24px;        /* Increase icon size */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);  /* Enlarge on hover */
+  background-color: #333; /* Slightly lighter shade on hover */
+}
+
+.d-flex .gap-3 {
+  gap: 1.5rem;            /* Even spacing between icons */
+}
+
+footer {
+  font-size: 0.9rem;
+  border-top: 1px solid #444; /* Subtle top border */
+}
+
+footer p {
+  margin: 0;
 }

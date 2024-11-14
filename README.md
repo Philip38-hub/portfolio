@@ -46,7 +46,7 @@ go run main.go
 3. Visit local host at port ```port:8080```
 
 ## Portfolio link
-- You can view the live portfolio here:
+- You can view the live portfolio here: https://iplatform.co.ke/philip/
 
 ## Author
 

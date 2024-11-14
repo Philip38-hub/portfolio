@@ -8,7 +8,7 @@ Welcome to my personal portfolio website! This is where I showcase my skills, pr
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Portfolio Link](#portfolio-link)
-- [Contact](#contact)
+- [Author](#author)
 
 ## About
 
